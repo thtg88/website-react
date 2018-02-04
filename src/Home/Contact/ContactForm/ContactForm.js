@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
+import { Button } from 'react-scroll';
 import ReCAPTCHA from "react-google-recaptcha";
 import update from 'immutability-helper';
+import { AllHtmlEntities } from 'html-entities';
 import './ContactForm.css';
 
 class ContactForm extends Component {
@@ -32,7 +34,7 @@ class ContactForm extends Component {
         <div className="col-lg-12 text-center">
           <hr className="small" />
           <p>By completing the form below, you agree the use of your details for future communications with yourself in regards to the message. Details are not stored in any database.</p>
-          <form noValidate onSubmit={this.handleSubmit}>
+          <form name="form" noValidate onSubmit={this.handleSubmit}>
             <input type="hidden" id="locale" name="locale" value="en" />
             <div id="contact_request-alert-container" className="form-group">
               <div className="col-lg-12">
@@ -76,15 +78,15 @@ class ContactForm extends Component {
               </div>
             </div>
             <div className="form-group">
-              <div className="col-lg-12 has-feedback">
+              <div className="col-md-12 has-feedback">
                 <div className="g-recaptcha-container">
                   <ReCAPTCHA ref={this.assignRecaptcha} sitekey={process.env.REACT_APP_GOOGLE_RECAPTCHA_SITE_KEY} onChange={this.reCaptchaOnChange} />
                 </div>
               </div>
             </div>
             <div className="form-group">
-              <div className="col-lg-12 text-center">
-                <button id="form-submit-button" type="submit" className="btn btn-dark" disabled={this.state.submitButtonDisabled}>{this.state.submitButtonHtml}</button>
+              <div className="col-md-12 text-center">
+                <Button type="submit" to="form" onClick={this.handleSubmit} className="btn btn-dark" value={this.state.submitButtonHtml} disabled={this.state.submitButtonDisabled} smooth={true} offset={-15} duration={500} />
               </div>
             </div>
           </form>
@@ -142,43 +144,66 @@ class ContactForm extends Component {
     }).then(function(response) {
       return response.json();
     }).then(this.handleResponse)
-    .catch(function (error) {
-      console.log(error);
-      this.state.recaptcha.reset();
-    });
+    .catch(this.handleResponse);
   }
 
   handleResponse(response) {
+    const entities = new AllHtmlEntities();
+
     if(typeof response === 'object') {
       if(typeof response.success !== 'undefined') {
+        // Successful response
         this.setState({
           contactRequestSuccess: true,
+          name: '',
+          phone: '',
+          email: '',
+          message: '',
         });
         this.state.recaptcha.reset();
 
       } else if(typeof response.errors !== 'undefined') {
+
+        // Process validation errors
         let allErrors = response.errors;
+        let msg;
         for(let field in allErrors) {
           if(allErrors.hasOwnProperty(field)) {
             if(Array.isArray(allErrors[field])) {
               let inputErrors = allErrors[field];
               for(let idx in inputErrors) {
                 if(inputErrors.hasOwnProperty(idx)) {
+
+                  // Set error for specific input
+
                   if(this.state.contactRequestErrors === null) {
                     this.setState({
                       contactRequestErrors: {}
                     });
                   }
-                  const setState =  {contactRequestErrors: {[field]: {$set: inputErrors[idx]}}};
+
+                  msg = entities.decode(inputErrors[idx]);
+
+                  const setState =  {contactRequestErrors: {[field]: {$set: msg}}};
                   this.setState(update(this.state, setState));
                 }
               }
             }
           }
         }
+      } else if(typeof response.message !== 'undefined') {
+        // Anything different from an HTTP response goes here
+        if(this.state.contactRequestErrors === null) {
+          this.setState({
+            contactRequestErrors: {}
+          });
+        }
+
+        const setState =  {contactRequestErrors: {name: {$set: response.message}}};
+        this.setState(update(this.state, setState));
       }
     }
-    console.log(this.state.contactRequestErrors);
+
     this.setState({
       submitButtonDisabled: false,
       submitButtonHtml: 'Send Message',
