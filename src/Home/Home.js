@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-scroll';
 import { hotjar } from 'react-hotjar';
-import Loader from '../Loader/Loader.js';
 import About from './About/About.js';
 import Contact from './Contact/Contact.js';
 import './Home.css';
@@ -12,7 +11,8 @@ class Home extends Component {
     super(props);
     this.handleLoad = this.handleLoad.bind(this);
     this.state = {
-      opacity: 0
+      opacity: typeof window !== 'undefined' ? 0 : 1,
+      display: typeof window !== 'undefined' ? 'none' : 'block',
     }
 
     hotjar.initialize(process.env.REACT_APP_HOTJAR_SITE_ID, process.env.REACT_APP_HOTJAR_VERSION);
@@ -21,8 +21,10 @@ class Home extends Component {
   render() {
     return (
       <div style={{height:'100%'}}>
-        <Loader />
-        <header id="top" className="header" style={{opacity:this.state.opacity}} title="Picture taken at: Cala Blanca, Ciutadella de Menorca, Spain.">
+        <div className="loading-container" style={{zIndex: 2000, position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, background: '#337ab7', display:this.state.display}}>
+          <div className="loader" style={{width: 6+'px', height: 6+'px', animation: 'typing 1s linear infinite alternate', margin: '50vh auto', position: 'relative', left: '-12px', backgroundColor: '#ffffff'}}></div>
+        </div>
+        <header id="top" className="header" onLoad={this.handleLoad} style={{opacity:this.state.opacity}} title="Picture taken at: Cala Blanca, Ciutadella de Menorca, Spain.">
           <div className="text-vertical-center">
             <h1>Hi, I'm Marco Marassi.</h1>
             <h3>Web Developer by day, Sleeper by night.</h3>
@@ -39,18 +41,11 @@ class Home extends Component {
     );
   }
 
-  componentDidMount() {
-    window.addEventListener('load', this.handleLoad);
-  }
-
-  componentDidUpdate () {
-    window.addEventListener('load', this.handleLoad);
-  }
-
   handleLoad() {
     if(this.state.opacity === 0) {
       this.setState({
-        opacity: 1
+        opacity: 1,
+        display: 'none'
       });
     }
   }
