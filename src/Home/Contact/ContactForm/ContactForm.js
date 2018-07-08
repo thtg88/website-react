@@ -124,7 +124,7 @@ class ContactForm extends Component {
       submitButtonDisabled: true,
       submitButtonHtml: 'Sending...',
     });
-    fetch('https://www-api-1.marco-marassi.com/api/v1/contact-requests', {
+    fetch(process.env.REACT_APP_WEBSITE_API_BASE_URL+'/api/v1/contact-requests', {
       method: 'POST',
       mode: 'cors',
       credentials: 'same-origin',
