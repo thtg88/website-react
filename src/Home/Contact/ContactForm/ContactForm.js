@@ -99,7 +99,9 @@ class ContactForm extends Component {
                     email: '',
                     message: '',
                 });
-                this.state.recaptcha.reset();
+                if(this.state.recaptcha !== null) {
+                    this.state.recaptcha.reset();
+                }
 
             } else if(typeof response.errors !== 'undefined') {
 
@@ -147,7 +149,9 @@ class ContactForm extends Component {
             submitButtonDisabled: false,
             submitButtonHtml: 'Send Message',
         });
-        this.state.recaptcha.reset();
+        if(this.state.recaptcha !== null) {
+            this.state.recaptcha.reset();
+        }
     }
 
     render() {
