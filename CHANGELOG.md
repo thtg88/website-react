@@ -4,6 +4,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/) (or at least it tries to).
 
+## [Unreleased]
+### Added
+- 404 page
+### Fixed
+- Error Boundary styling
+
+## [1.5.1] - 2018-07-30
+### Added
+- Roast.io configuration
+### Fixed
+- Roast.io caching configuration
+
 ## [1.5.0] - 2018-07-30
 ### Added
 - This changelog
@@ -27,6 +39,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/) (or at lea
 - Google Analytics integration
 ### Changed
 - Dependencies updates
+### Removed
+- Hotjar integration
 
 ## [1.1.2] - 2018-07-08
 ### Changed

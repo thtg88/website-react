@@ -1,0 +1,10 @@
+/static/media/*
+    Cache-Control: public, max-age=1209600
+/static/css/*
+    Cache-Control: public, max-age=604800
+/static/js/*
+    Cache-Control: public, max-age=604800
+/index.html
+    Cache-Control: no-cache, no-store, must-revalidate
+    Pragma: no-cache
+    Expires: 0
