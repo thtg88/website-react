@@ -17,10 +17,7 @@ class ErrorBoundary extends Component {
         if (this.state.error) {
             //render fallback UI
             return (
-                <div
-                    className="snap"
-                    onClick={() => window.Raven.lastEventId() && window.Raven.showReportDialog()}
-                >
+                <div>
                     <h1>We're sorry - something's gone wrong.</h1>
                     <p>Our team has been notified.</p>
                 </div>

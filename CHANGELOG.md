@@ -10,6 +10,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/) (or at lea
 ### Fixed
 - Error Boundary styling
 
+## [1.5.2] - 2018-08-18
+### Fixed
+- Job title update
+
 ## [1.5.1] - 2018-07-30
 ### Added
 - Roast.io configuration

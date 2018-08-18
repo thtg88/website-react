@@ -1,6 +1,6 @@
 {
   "name": "website-react",
-  "version": "1.5.1",
+  "version": "1.5.2",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome": "0.0.21",
@@ -11,10 +11,10 @@
     "bootstrap": "^3.3.7",
     "html-entities": "^1.2.1",
     "immutability-helper": "^2.7.1",
-    "react": "^16.4.1",
+    "react": "^16.4.2",
     "react-async-script": "^0.9.1",
     "react-bootstrap": "^0.31.5",
-    "react-dom": "^16.4.1",
+    "react-dom": "^16.4.2",
     "react-ga": "^2.5.3",
     "react-google-recaptcha": "^0.9.9",
     "react-instagram-embed": "^1.4.0",
