@@ -1,43 +1,50 @@
 .header {
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: scroll;
-  height: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: scroll;
+    height: 100%;
 }
+
 @media (min-width:1201px) {
-  .header {
-    background-image: url(./bg-2-full.jpg);
-    animation: opacity;
-    animation-duration: 3s;
-    animation-fill-mode: backwards;
-    transition: opacity 3s ease-in-out;
-  }
+    .header {
+        background-image: url(./bg-2-full.jpg);
+        animation: opacity;
+        animation-duration: 3s;
+        animation-fill-mode: backwards;
+        transition: opacity 3s ease-in-out;
+    }
 }
+
 @media (max-width:500px) {
-  .header {
-    background-image: url(./bg-2-600w.jpg);
-  }
+    .header {
+        background-image: url(./bg-2-600w.jpg);
+    }
 }
+
 @media (max-width:800px) and (min-width:501px){
-  .header {
-    background-image: url(./bg-2-900w.jpg);
-  }
+    .header {
+        background-image: url(./bg-2-900w.jpg);
+    }
 }
+
 @media (max-width:1200px) and (min-width:801px){
-  .header {
-    background-image: url(./bg-2-1200w.jpg);
-  }
+    .header {
+        background-image: url(./bg-2-1200w.jpg);
+    }
 }
+
 @media all and (orientation:portrait) and (max-width:500px) {
-  .header {
-    background-image: url(./bg-portrait-2.jpg);
-  }
+    .header {
+        background-image: url(./bg-portrait-2.jpg);
+    }
 }
+
 #profile-icon-container {
-  width: 200px;
-  height: 175px;
-  margin: auto;
+    width: 200px;
+    height: 175px;
+    margin: auto;
 }
+
 #profile-icon {
-  display: inline-block;
+    display: inline-block;
 }

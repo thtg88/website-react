@@ -4,9 +4,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/) (or at least it tries to).
 
-## [Unreleased]
+## [1.6.0] - 2018-08-25
 ### Added
 - 404 page
+### Changed
+- Improved Sentry initialization, now initialized only in production environment.
+- Improved Google Analytics initialization, now initialized only in production environment.
 ### Fixed
 - Error Boundary styling
 
