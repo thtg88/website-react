@@ -4,7 +4,6 @@ import ReactGA from 'react-ga';
 import About from './About/About.js';
 import Contact from './Contact/Contact.js';
 import './Home.css';
-import icon from './icon.png';
 
 class Home extends Component {
     state = {
@@ -49,7 +48,7 @@ class Home extends Component {
                         <h3>Web Developer by day, Sleeper by night.</h3>
                         <p>What did you think I was? A superhero or something?</p>
                         <div id="profile-icon-container">
-                            <img id="profile-icon" src={icon} alt="Icon Logo" title="This looks like my face." className="img-responsive img-circle" />
+                            <img id="profile-icon" src={process.env.PUBLIC_URL+"/icon.png"} alt="Icon Logo" title="This looks like my face." className="img-responsive img-circle" />
                         </div>
                         <Link to="about" smooth={true} duration={1000} className="btn btn-dark btn-lg">{"But wait, there's more!"}</Link>
                     </div>

@@ -21,8 +21,8 @@ class ErrorBoundary extends Component {
             //render fallback UI
             return (
                 <div style={{height:'100%'}}>
-                    <section id="not-found" class="http-error">
-                        <div class="text-vertical-center">
+                    <section id="not-found" className="http-error">
+                        <div className="text-vertical-center">
                             <h1>500</h1>
                             <h3>{"We're sorry - something's gone wrong."}</h3>
                             <Link to="/" className="btn btn-dark btn-lg">

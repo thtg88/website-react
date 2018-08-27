@@ -12,7 +12,7 @@
 
         <meta name="twitter:title" content="Marco Marassi - Web Developer">
 		<meta name="twitter:description" content="As a Web Developer (using technologies like AJAX, jQuery, Laravel, PHP, and SQL), I took care of all the public websites, the company&apos;s Business System, and most of the internal online systems.">
-		<meta name="twitter:image" content="https://www.marco-marassi.com/assets/img/icon.png">
+		<meta name="twitter:image" content="%PUBLIC_URL%/icon.png">
 		<meta name="twitter:card" content="summary">
 		<meta name="twitter:image:alt" content="Marco Marassi - Web Developer">
 
@@ -20,8 +20,8 @@
 		<meta property="og:type" content="website">
 		<meta property="og:site_name" content="Marco Marassi - Web Developer">
 		<meta property="og:description" content="As a Web Developer (using technologies like AJAX, jQuery, Laravel, PHP, and SQL), I took care of all the public websites, the company&apos;s Business System, and most of the internal online systems.">
-		<meta property="og:image" content="https://www.marco-marassi.com/assets/img/icon.png">
-		<meta property="og:url" content="https://www.marco-marassi.com/">
+		<meta property="og:image" content="%PUBLIC_URL%/icon.png">
+		<meta property="og:url" content="%PUBLIC_URL%/">
 
         <!--
             manifest.json provides metadata used when your web app is added to the
@@ -39,6 +39,36 @@
             Learn how to configure a non-root public URL by running `npm run build`.
         -->
         <title>Marco Marassi - Web Developer</title>
+
+        <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "Person",
+            "name": "Marco Marassi",
+            "familyName": "Marassi",
+            "givenName": "Marco",
+            "gender": "Male",
+            "nationality": "Italy",
+            "jobTitle": "Principal Web Developer",
+            "knowsLanguage": [
+                "it-IT",
+                "en-GB",
+                "es-ES",
+                "fr-FR"
+            ],
+            "worksFor": {
+                "name": "Somerset Design",
+                "url": "https://somersetdesign.co.uk"
+            },
+            "image": "%PUBLIC_URL%/icon.png",
+            "sameAs": [
+                "https://www.linkedin.com/in/marco-marassi",
+                "https://www.instagram.com/thtg88",
+                "https://bitbucket.org/thtg88/",
+                "https://github.com/thtg88"
+            ]
+        }
+        </script>
     </head>
     <body>
         <noscript>
