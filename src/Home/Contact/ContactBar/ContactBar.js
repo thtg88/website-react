@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
-import FontAwesomeIcon from '@fortawesome/react-fontawesome';
-import faMapMarker from '@fortawesome/fontawesome-free-solid/faMapMarker';
-import faBitbucket from '@fortawesome/fontawesome-free-brands/faBitbucket';
-import faInstagram from '@fortawesome/fontawesome-free-brands/faInstagram';
-import faLinkedin from '@fortawesome/fontawesome-free-brands/faLinkedin';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMapMarker } from '@fortawesome/free-solid-svg-icons';
+import { faBitbucket, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import './ContactBar.css';
 
 class ContactBar extends Component {

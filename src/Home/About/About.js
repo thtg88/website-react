@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Modal } from 'react-bootstrap';
-import FontAwesomeIcon from '@fortawesome/react-fontawesome';
-import faMapMarker from '@fortawesome/fontawesome-free-solid/faMapMarker';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMapMarker } from '@fortawesome/free-solid-svg-icons';
 import InstagramEmbed from 'react-instagram-embed'
 import wheresWaldo from './wheres-waldo-750w.jpg';
 import './About.css';
