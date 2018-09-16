@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-scroll';
 import ReactGA from 'react-ga';
-import About from './About/About.js';
-import Contact from './Contact/Contact.js';
+import About from './About';
+import Contact from './Contact';
 import './Home.css';
 
 class Home extends Component {

@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/) (or at least it tries to).
 
+## [1.8.0] - 2018-09-16
+### Added
+- Webpack Hot Module Reload
+### Fixed
+- Validation FontAwesome icons are now showing properly
+### Changed
+- Re-write of most components to follow a more pure functional approach
+
 ## [1.7.1] - 2018-08-30
 ### Fixed
 - FontAwesome dependency major update

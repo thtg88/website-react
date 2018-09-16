@@ -17,8 +17,8 @@ class ErrorBoundary extends Component {
     }
 
     render() {
-        if (this.state.error) {
-            //render fallback UI
+        if (this.state.error !== null) {
+            // Render fallback UI
             return (
                 <div style={{height:'100%'}}>
                     <section id="not-found" className="http-error">

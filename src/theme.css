@@ -167,10 +167,10 @@ footer {
     padding: 100px 0;
 }
 #to-top {
-  display: none;
-  position: fixed;
-  bottom: 5px;
-  right: 5px;
+    display: none;
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
 }
 /**
  * Contact form style by:
@@ -179,48 +179,48 @@ footer {
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
  */
 footer .form-group {
-  margin-bottom: 25px;
+    margin-bottom: 25px;
 }
 footer .form-group input,
 footer .form-group textarea {
-  padding: 20px;
+    padding: 20px;
 }
 footer .form-group input.form-control {
-  height: auto;
+    height: auto;
 }
 footer .form-group textarea.form-control {
-  height: 236px;
+    height: 236px;
 }
 footer .form-control:focus {
-  border-color: #fed136;
-  box-shadow: none;
+    border-color: #fed136;
+    box-shadow: none;
 }
 footer ::-webkit-input-placeholder {
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
-  font-weight: 700;
-  color: #eeeeee;
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #eeeeee;
 }
 footer :-moz-placeholder {
-  /* Firefox 18- */
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
-  font-weight: 700;
-  color: #eeeeee;
+    /* Firefox 18- */
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #eeeeee;
 }
 footer ::-moz-placeholder {
-  /* Firefox 19+ */
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
-  font-weight: 700;
-  color: #eeeeee;
+    /* Firefox 19+ */
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #eeeeee;
 }
 footer :-ms-input-placeholder {
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
-  font-weight: 700;
-  color: #eeeeee;
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #eeeeee;
 }
 footer .text-danger {
-  color: #e74c3c;
+    color: #e74c3c;
 }
