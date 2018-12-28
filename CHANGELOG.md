@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/) (or at least it tries to).
 
+## [Unreleased]
+### Added
+- PropTypes
+
+## [1.8.1] - 2018-12-28
+### Changed
+- Dependencies updates
+
 ## [1.8.0] - 2018-09-16
 ### Added
 - Webpack Hot Module Reload
