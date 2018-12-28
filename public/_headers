@@ -1,5 +1,7 @@
 /static/media/*
     Cache-Control: public, max-age=1209600
+/*.png
+    Cache-Control: public, max-age=1209600
 /static/css/*
     Cache-Control: public, max-age=604800
 /static/js/*

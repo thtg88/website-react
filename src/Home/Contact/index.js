@@ -1,7 +1,35 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
 import ContactBar from './ContactBar';
 import ContactForm from './ContactForm';
 import Copyright from './Copyright';
+import { animateScroll } from 'react-scroll';
+
+// var fixed = false;
+// $(document).scroll(function() {
+//     if ($(this).scrollTop() > 250) {
+//         if (!fixed) {
+//             fixed = true;
+//             // $('#to-top').css({position:'fixed', display:'block'});
+//             $('#to-top').show("slow", function() {
+//                 $('#to-top').css({
+//                     position: 'fixed',
+//                     display: 'block'
+//                 });
+//             });
+//         }
+//     } else {
+//         if (fixed) {
+//             fixed = false;
+//             $('#to-top').hide("slow", function() {
+//                 $('#to-top').css({
+//                     display: 'none'
+//                 });
+//             });
+//         }
+//     }
+// });
 
 const Contact = () => (
     <footer id="contact" className="bg-primary">
@@ -15,7 +43,13 @@ const Contact = () => (
             <ContactForm />
             <Copyright />
         </div>
-        <a id="to-top" href="#top" className="btn btn-dark btn-lg" aria-label="Go to the top of the page."><span className="fa fa-chevron-up fa-fw fa-1x"></span></a>
+        <a
+            id="to-top"
+            href="#top"
+            onClick={() => animateScroll.scrollToTop()}
+            className="btn btn-dark btn-lg"
+            aria-label="Go to the top of the page."
+        ><FontAwesomeIcon icon={faChevronUp} fixedWidth size="2x" /></a>
     </footer>
 );
 
