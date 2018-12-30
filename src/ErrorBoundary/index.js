@@ -1,7 +1,14 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import { configureScope, captureException } from '@sentry/browser';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome } from '@fortawesome/free-solid-svg-icons';
+
+const {
+    NODE_ENV,
+    REACT_APP_SENTRY_KEY,
+    REACT_APP_SENTRY_PROJECT_ID
+} = process.env;
 
 class ErrorBoundary extends Component {
     state = {
@@ -11,8 +18,23 @@ class ErrorBoundary extends Component {
     componentDidCatch(error, errorInfo) {
         this.setState({ error });
 
-        if(process.env.NODE_ENV === 'production') {
-            window.Raven.captureException(error, { extra: errorInfo });
+        if(
+            NODE_ENV === 'production'
+            && typeof REACT_APP_SENTRY_KEY !== 'undefined'
+            && REACT_APP_SENTRY_KEY !== null
+            && REACT_APP_SENTRY_KEY !== ''
+            && typeof REACT_APP_SENTRY_PROJECT_ID !== 'undefined'
+            && REACT_APP_SENTRY_PROJECT_ID !== null
+            && REACT_APP_SENTRY_PROJECT_ID !== ''
+        ) {
+            // If app in production, send error to Sentry
+            configureScope(scope => {
+                Object.keys(errorInfo).forEach(key => {
+                    scope.setExtra(key, errorInfo[key]);
+                });
+            });
+
+            captureException(error);
         }
     }
 
