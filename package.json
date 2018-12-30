@@ -1,42 +1,61 @@
 {
-  "name": "website-react",
-  "version": "1.8.0",
-  "private": true,
-  "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.6.3",
-    "@fortawesome/fontawesome-svg-core": "^1.2.12",
-    "@fortawesome/free-brands-svg-icons": "^5.6.3",
-    "@fortawesome/free-regular-svg-icons": "^5.6.3",
-    "@fortawesome/free-solid-svg-icons": "^5.6.3",
-    "@fortawesome/react-fontawesome": "^0.1.0",
-    "bootstrap": "^3.4.0",
-    "html-entities": "^1.2.1",
-    "immutability-helper": "^2.9.0",
-    "react": "^16.7.0",
-    "react-async-script": "^0.9.1",
-    "react-bootstrap": "^0.31.5",
-    "react-dom": "^16.7.0",
-    "react-ga": "^2.5.6",
-    "react-google-recaptcha": "^1.0.5",
-    "react-instagram-embed": "^1.4.1",
-    "react-router": "^4.3.1",
-    "react-router-dom": "^4.3.1",
-    "react-scroll": "^1.7.10"
-  },
-  "devDependencies": {
-    "react-scripts": "^2.1.2"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
-  },
-  "homepage": "https://www.marco-marassi.com",
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ]
+    "name": "website-react",
+    "version": "1.8.0",
+    "private": true,
+    "author": "Marco Marassi",
+    "copyright": "Copyright 2018 Marco Marassi",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:thtg88/website-react.git"
+    },
+    "dependencies": {
+        "@fortawesome/fontawesome-free": "^5.6.3",
+        "@fortawesome/fontawesome-svg-core": "^1.2.12",
+        "@fortawesome/free-brands-svg-icons": "^5.6.3",
+        "@fortawesome/free-regular-svg-icons": "^5.6.3",
+        "@fortawesome/free-solid-svg-icons": "^5.6.3",
+        "@fortawesome/react-fontawesome": "^0.1.0",
+        "@sentry/browser": "^4.4.2",
+        "bootstrap": "^3.4.0",
+        "html-entities": "^1.2.1",
+        "immutability-helper": "^2.9.0",
+        "node-sass": "^4.11.0",
+        "prop-types": "^15.6.2",
+        "react": "^16.7.0",
+        "react-app-polyfill": "^0.2.0",
+        "react-async-script": "^0.9.1",
+        "react-bootstrap": "^0.31.5",
+        "react-dom": "^16.7.0",
+        "react-ga": "^2.5.6",
+        "react-google-recaptcha": "^1.0.5",
+        "react-instagram-embed": "^1.4.1",
+        "react-router-dom": "^4.3.1",
+        "react-scroll": "^1.7.10",
+        "react-test-renderer": "^16.7.0"
+    },
+    "devDependencies": {
+        "enzyme": "^3.8.0",
+        "enzyme-adapter-react-16": "^1.7.1",
+        "react-scripts": "^2.1.2",
+        "source-map-explorer": "^1.6.0"
+    },
+    "bugs": {
+        "url": "https://github.com/thtg88/website-react/issues"
+    },
+    "scripts": {
+        "analyze": "source-map-explorer build/static/js/main.*",
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "test": "react-scripts test",
+        "test:debug": "react-scripts --inspect-brk test --runInBand",
+        "eject": "react-scripts eject"
+    },
+    "homepage": "https://www.marco-marassi.com",
+    "browserslist": [
+        ">0.2%",
+        "not dead",
+        "not ie <= 11",
+        "not op_mini all"
+    ]
 }
