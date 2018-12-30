@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const AboutContent = ({ wheresWaldoLinkOnClick, classicCarsOnClick }) => (
     <div className="container">
@@ -59,5 +60,10 @@ const AboutContent = ({ wheresWaldoLinkOnClick, classicCarsOnClick }) => (
         </div>
     </div>
 );
+
+AboutContent.propTypes = {
+    wheresWaldoLinkOnClick: PropTypes.func,
+    classicCarsOnClick: PropTypes.func,
+};
 
 export default AboutContent;

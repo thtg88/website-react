@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Button, Modal } from 'react-bootstrap';
 import InstagramEmbed from 'react-instagram-embed';
 
@@ -20,5 +21,10 @@ const ClassicCarsModal = ({ show, onHide }) => (
         </Footer>
     </Modal>
 );
+
+ClassicCarsModal.propTypes= {
+    onHide: PropTypes.func,
+    show: PropTypes.bool,
+};
 
 export default ClassicCarsModal;

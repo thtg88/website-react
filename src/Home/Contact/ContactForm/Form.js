@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import ReCAPTCHA from "react-google-recaptcha";
 import ContactErrorsAlert from './ContactErrorsAlert';
 import MessageSentAlert from './MessageSentAlert';
@@ -35,7 +36,7 @@ const Form = ({
                     onChange={onInputChange}
                     displayName="Name"
                     error={errors === null ? null : errors.name}
-                    maxLength="255"
+                    maxLength={255}
                 />
                 <FormInput
                     type="email"
@@ -44,7 +45,7 @@ const Form = ({
                     onChange={onInputChange}
                     displayName="Email"
                     error={errors === null ? null : errors.email}
-                    maxLength="255"
+                    maxLength={255}
                 />
                 <FormInput
                     type="tel"
@@ -53,7 +54,7 @@ const Form = ({
                     onChange={onInputChange}
                     displayName="Phone"
                     error={errors === null ? null : errors.phone}
-                    maxLength="255"
+                    maxLength={255}
                 />
             </div>
             <div className="col-md-6">
@@ -65,7 +66,7 @@ const Form = ({
                         onChange={onInputChange}
                         displayName="Message"
                         error={errors === null ? null : errors.message}
-                        maxLength="4000"
+                        maxLength={4000}
                     />
                 </div>
             </div>
@@ -98,5 +99,17 @@ const Form = ({
         </div>
     </form>
 );
+
+Form.propTypes = {
+    errors: PropTypes.object,
+    onSubmit: PropTypes.func,
+    onInputChange: PropTypes.func,
+    reCaptchaOnChange: PropTypes.func,
+    recaptchaRef: PropTypes.func,
+    success: PropTypes.bool,
+    submitButtonDisabled: PropTypes.bool,
+    submitButtonHtml: PropTypes.string,
+    values: PropTypes.object,
+};
 
 export default Form;

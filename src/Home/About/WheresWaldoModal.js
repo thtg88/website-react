@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Button, Modal } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapMarker } from '@fortawesome/free-solid-svg-icons';
@@ -45,5 +46,10 @@ const WheresWaldoModal = ({ show, onHide }) => (
         </Footer>
     </Modal>
 );
+
+WheresWaldoModal.propTypes = {
+    onHide: PropTypes.func,
+    show: PropTypes.bool,
+}
 
 export default WheresWaldoModal;

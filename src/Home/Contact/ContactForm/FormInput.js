@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimesCircle } from '@fortawesome/free-solid-svg-icons';
 
@@ -9,7 +10,7 @@ const FormInput = ({
     name,
     onChange,
     type,
-    value
+    value,
 }) => {
     const containerErrorClass = error ? ' has-error' : '';
 
@@ -65,6 +66,16 @@ const FormInput = ({
             }
         </div>
     );
+};
+
+FormInput.propTypes = {
+    displayName: PropTypes.string,
+    error: PropTypes.string,
+    maxLength: PropTypes.number,
+    name: PropTypes.string,
+    onChange: PropTypes.func,
+    type: PropTypes.string,
+    value: PropTypes.string,
 };
 
 export default FormInput;
