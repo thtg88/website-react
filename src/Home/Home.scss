@@ -5,6 +5,16 @@
     height: 100%;
 }
 
+#profile-icon-container {
+    width: 200px;
+    height: 175px;
+    margin: auto;
+}
+
+#profile-icon {
+    display: inline-block;
+}
+
 @media (min-width:1201px) {
     .header {
         background-image: url(./bg-2-full.jpg);
@@ -37,14 +47,4 @@
     .header {
         background-image: url(./bg-portrait-2.jpg);
     }
-}
-
-#profile-icon-container {
-    width: 200px;
-    height: 175px;
-    margin: auto;
-}
-
-#profile-icon {
-    display: inline-block;
 }

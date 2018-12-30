@@ -1,8 +1,8 @@
 import React from 'react';
-import { Modal } from 'react-bootstrap';
+import { Button, Modal } from 'react-bootstrap';
 import InstagramEmbed from 'react-instagram-embed';
 
-const { Body, Header, Title } = Modal;
+const { Body, Footer, Header, Title } = Modal;
 
 const ClassicCarsModal = ({ show, onHide }) => (
     <Modal show={show} onHide={onHide}>
@@ -10,8 +10,14 @@ const ClassicCarsModal = ({ show, onHide }) => (
             <Title>Chasing Classic Cars</Title>
         </Header>
         <Body>
-            <InstagramEmbed url="https://www.instagram.com/p/4bs5E3zh-c/" maxWidth={640} />
+            <InstagramEmbed
+                url="https://www.instagram.com/p/4bs5E3zh-c/"
+                maxWidth={640}
+            />
         </Body>
+        <Footer>
+            <Button bsStyle="primary" onClick={onHide}>Close</Button>
+        </Footer>
     </Modal>
 );
 

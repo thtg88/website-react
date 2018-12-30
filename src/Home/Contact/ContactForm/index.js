@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import update from 'immutability-helper';
 import { AllHtmlEntities } from 'html-entities';
 import Form from './Form';
-import './ContactForm.css';
+import './ContactForm.scss';
+
+const { REACT_APP_WEBSITE_API_BASE_URL } = process.env;
 
 class ContactForm extends Component {
-
     state = {
         contactRequestErrors: null,
         contactRequestSuccess: false,
@@ -14,6 +14,7 @@ class ContactForm extends Component {
         email: '',
         message: '',
         recaptcha: null,
+        g_recaptcha_response: null,
         submitButtonDisabled: false,
         submitButtonHtml: 'Send Message',
     };
@@ -31,7 +32,7 @@ class ContactForm extends Component {
     assignRecaptcha(el) {
         if(this.state.recaptcha === null) {
             this.setState({
-                recaptcha: el
+                recaptcha: el,
             });
         }
     }
@@ -44,12 +45,20 @@ class ContactForm extends Component {
 
     reCaptchaOnChange(value) {
         // console.log("Captcha value:", value);
+
         this.setState({
-            g_recaptcha_response: value
+            g_recaptcha_response: value,
         })
     }
 
     handleSubmit(e) {
+        const {
+            email,
+            g_recaptcha_response,
+            message,
+            name,
+            phone,
+        } = this.state;
         e.preventDefault();
 
         this.setState({
@@ -59,7 +68,7 @@ class ContactForm extends Component {
             submitButtonHtml: 'Sending...',
         });
 
-        fetch(process.env.REACT_APP_WEBSITE_API_BASE_URL+'/api/v1/contact-requests', {
+        fetch(REACT_APP_WEBSITE_API_BASE_URL+'/api/v1/contact-requests', {
             method: 'POST',
             mode: 'cors',
             credentials: 'same-origin',
@@ -68,24 +77,21 @@ class ContactForm extends Component {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-                name: this.state.name,
-                email: this.state.email,
-                phone: this.state.phone,
-                message: this.state.message,
-                g_recaptcha_response: this.state.g_recaptcha_response,
+                name,
+                email,
+                phone,
+                message,
+                g_recaptcha_response,
             })
         })
-            .then(function(response) {
-                return response;
-            })
-            .then(function(response) {
-                return response.json();
-            })
+            .then(response => response)
+            .then(response => response.json())
             .then(this.handleResponse)
             .catch(this.handleResponse);
     }
 
     handleResponse(response) {
+        const { recaptcha } = this.state;
         const entities = new AllHtmlEntities();
 
         if(typeof response === 'object') {
@@ -98,48 +104,35 @@ class ContactForm extends Component {
                     email: '',
                     message: '',
                 });
-                if(this.state.recaptcha !== null) {
-                    this.state.recaptcha.reset();
-                }
 
+                if(recaptcha !== null) {
+                    recaptcha.reset();
+                }
             } else if(typeof response.errors !== 'undefined') {
+                const newContactRequestErrors = {};
 
                 // Process validation errors
-                let allErrors = response.errors;
-                let msg;
-                for(let field in allErrors) {
-                    if(allErrors.hasOwnProperty(field)) {
-                        if(Array.isArray(allErrors[field])) {
-                            let inputErrors = allErrors[field];
-                            for(let idx in inputErrors) {
-                                if(inputErrors.hasOwnProperty(idx)) {
+                Object.entries(response.errors).forEach(([field, errors]) => {
+                    if(Array.isArray(errors)) {
+                        errors.forEach((error, idx) => {
+                            const msg = entities.decode(error);
 
-                                    // Set error for specific input
-                                    if(this.state.contactRequestErrors === null) {
-                                        this.setState({
-                                            contactRequestErrors: {}
-                                        });
-                                    }
-
-                                    msg = entities.decode(inputErrors[idx]);
-
-                                    const setState = {contactRequestErrors: {[field]: {$set: msg}}};
-                                    this.setState(update(this.state, setState));
-                                }
-                            }
-                        }
+                            newContactRequestErrors[field] = msg;
+                        });
                     }
-                }
+                });
+
+                this.setState({
+                    contactRequestErrors: newContactRequestErrors,
+                });
+
             } else if(typeof response.message !== 'undefined') {
                 // Anything different from an HTTP response goes here
-                if(this.state.contactRequestErrors === null) {
-                    this.setState({
-                        contactRequestErrors: {}
-                    });
-                }
-
-                const setState = {contactRequestErrors: {name: {$set: response.message}}};
-                this.setState(update(this.state, setState));
+                this.setState({
+                    contactRequestErrors: {
+                        name: response.message,
+                    },
+                });
             }
         }
 
@@ -148,25 +141,27 @@ class ContactForm extends Component {
             submitButtonHtml: 'Send Message',
         });
 
-        if(this.state.recaptcha !== null) {
-            this.state.recaptcha.reset();
+        if(recaptcha !== null) {
+            recaptcha.reset();
         }
     }
 
     render() {
-
         const {
+            contactRequestErrors,
+            contactRequestSuccess,
             email,
             message,
             name,
-            phone
+            phone,
+            submitButtonDisabled,
+            submitButtonHtml,
         } = this.state;
-
         const values = {
             email,
             message,
             name,
-            phone
+            phone,
         };
 
         return (
@@ -178,14 +173,14 @@ class ContactForm extends Component {
                         Details are not stored in any database.
                     </p>
                     <Form
-                        errors={this.state.contactRequestErrors}
+                        errors={contactRequestErrors}
                         onSubmit={this.handleSubmit}
                         onInputChange={this.updateInputValue}
                         reCaptchaOnChange={this.reCaptchaOnChange}
                         reCaptchaRef={this.assignRecaptcha}
-                        success={this.state.contactRequestSuccess}
-                        submitButtonDisabled={this.state.submitButtonDisabled}
-                        submitButtonHtml={this.state.submitButtonHtml}
+                        success={contactRequestSuccess}
+                        submitButtonDisabled={submitButtonDisabled}
+                        submitButtonHtml={submitButtonHtml}
                         values={values}
                     />
                 </div>

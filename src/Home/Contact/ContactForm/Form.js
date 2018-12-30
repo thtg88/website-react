@@ -3,7 +3,9 @@ import ReCAPTCHA from "react-google-recaptcha";
 import ContactErrorsAlert from './ContactErrorsAlert';
 import MessageSentAlert from './MessageSentAlert';
 import { Button } from 'react-scroll';
-import TextInput from './TextInput';
+import FormInput from './FormInput';
+
+const { REACT_APP_GOOGLE_RECAPTCHA_SITE_KEY } = process.env;
 
 const Form = ({
     errors,
@@ -26,7 +28,7 @@ const Form = ({
         </div>
         <div className="form-group">
             <div className="col-md-6">
-                <TextInput
+                <FormInput
                     type="text"
                     name="name"
                     value={values.name}
@@ -35,7 +37,7 @@ const Form = ({
                     error={errors === null ? null : errors.name}
                     maxLength="255"
                 />
-                <TextInput
+                <FormInput
                     type="email"
                     name="email"
                     value={values.email}
@@ -44,7 +46,7 @@ const Form = ({
                     error={errors === null ? null : errors.email}
                     maxLength="255"
                 />
-                <TextInput
+                <FormInput
                     type="tel"
                     name="phone"
                     value={values.phone}
@@ -56,7 +58,7 @@ const Form = ({
             </div>
             <div className="col-md-6">
                 <div className="form-group has-feedback">
-                    <TextInput
+                    <FormInput
                         type="textarea"
                         name="message"
                         value={values.message}
@@ -71,7 +73,11 @@ const Form = ({
         <div className="form-group">
             <div className="col-md-12 has-feedback">
                 <div className="g-recaptcha-container">
-                    <ReCAPTCHA ref={recaptchaRef} sitekey={process.env.REACT_APP_GOOGLE_RECAPTCHA_SITE_KEY} onChange={reCaptchaOnChange} />
+                    <ReCAPTCHA
+                        ref={recaptchaRef}
+                        sitekey={REACT_APP_GOOGLE_RECAPTCHA_SITE_KEY}
+                        onChange={reCaptchaOnChange}
+                    />
                 </div>
             </div>
         </div>

@@ -4,7 +4,6 @@ import WheresWaldoModal from './WheresWaldoModal';
 import ClassicCarsModal from './ClassicCarsModal';
 
 class About extends Component {
-
     state = {
         classicCarsModal: {
             show: false,
@@ -74,4 +73,5 @@ class About extends Component {
         );
     }
 }
+
 export default About;
