@@ -105,7 +105,7 @@ Form.propTypes = {
     onSubmit: PropTypes.func,
     onInputChange: PropTypes.func,
     reCaptchaOnChange: PropTypes.func,
-    recaptchaRef: PropTypes.func,
+    recaptchaRef: PropTypes.object,
     success: PropTypes.bool,
     submitButtonDisabled: PropTypes.bool,
     submitButtonHtml: PropTypes.string,

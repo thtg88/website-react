@@ -1,9 +1,10 @@
-import React, { Component } from 'react';
+import React, { Component, createRef } from 'react';
 import { AllHtmlEntities } from 'html-entities';
 import Form from './Form';
 import './ContactForm.scss';
 
 const { REACT_APP_WEBSITE_API_BASE_URL } = process.env;
+// const recaptchaRef = createRef();
 
 class ContactForm extends Component {
     state = {
@@ -13,7 +14,7 @@ class ContactForm extends Component {
         phone: '',
         email: '',
         message: '',
-        recaptcha: null,
+        recaptcha: createRef(),
         g_recaptcha_response: null,
         submitButtonDisabled: false,
         submitButtonHtml: 'Send Message',
@@ -22,19 +23,10 @@ class ContactForm extends Component {
     constructor(props) {
         super(props);
 
-        this.assignRecaptcha = this.assignRecaptcha.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleResponse = this.handleResponse.bind(this);
         this.reCaptchaOnChange = this.reCaptchaOnChange.bind(this);
         this.updateInputValue = this.updateInputValue.bind(this);
-    }
-
-    assignRecaptcha(el) {
-        if(this.state.recaptcha === null) {
-            this.setState({
-                recaptcha: el,
-            });
-        }
     }
 
     updateInputValue(evt) {
@@ -106,7 +98,7 @@ class ContactForm extends Component {
                 });
 
                 if(recaptcha !== null) {
-                    recaptcha.reset();
+                    recaptcha.current.reset();
                 }
             } else if(typeof response.errors !== 'undefined') {
                 const newContactRequestErrors = {};
@@ -142,7 +134,7 @@ class ContactForm extends Component {
         });
 
         if(recaptcha !== null) {
-            recaptcha.reset();
+            recaptcha.current.reset();
         }
     }
 
@@ -154,6 +146,7 @@ class ContactForm extends Component {
             message,
             name,
             phone,
+            recaptcha,
             submitButtonDisabled,
             submitButtonHtml,
         } = this.state;
@@ -177,7 +170,7 @@ class ContactForm extends Component {
                         onSubmit={this.handleSubmit}
                         onInputChange={this.updateInputValue}
                         reCaptchaOnChange={this.reCaptchaOnChange}
-                        reCaptchaRef={this.assignRecaptcha}
+                        recaptchaRef={recaptcha}
                         success={contactRequestSuccess}
                         submitButtonDisabled={submitButtonDisabled}
                         submitButtonHtml={submitButtonHtml}
