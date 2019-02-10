@@ -50,6 +50,6 @@ const WheresWaldoModal = ({ show, onHide }) => (
 WheresWaldoModal.propTypes = {
     onHide: PropTypes.func,
     show: PropTypes.bool,
-}
+};
 
 export default WheresWaldoModal;
