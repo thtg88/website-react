@@ -10,11 +10,11 @@
         "url": "git@github.com:thtg88/website-react.git"
     },
     "dependencies": {
-        "@fortawesome/fontawesome-free": "^5.8.1",
-        "@fortawesome/fontawesome-svg-core": "^1.2.17",
-        "@fortawesome/free-brands-svg-icons": "^5.8.1",
-        "@fortawesome/free-regular-svg-icons": "^5.8.1",
-        "@fortawesome/free-solid-svg-icons": "^5.8.1",
+        "@fortawesome/fontawesome-free": "^5.9.0",
+        "@fortawesome/fontawesome-svg-core": "^1.2.19",
+        "@fortawesome/free-brands-svg-icons": "^5.9.0",
+        "@fortawesome/free-regular-svg-icons": "^5.9.0",
+        "@fortawesome/free-solid-svg-icons": "^5.9.0",
         "@fortawesome/react-fontawesome": "^0.1.4",
         "@sentry/browser": "^4.6.6",
         "bootstrap": "^3.4.1",
@@ -32,12 +32,12 @@
         "react-router-dom": "^4.3.1",
         "react-scroll": "^1.7.11",
         "react-test-renderer": "^16.8.6",
-        "typescript": "^3.4.5"
+        "typescript": "^3.5.1"
     },
     "devDependencies": {
-        "enzyme": "^3.9.0",
-        "enzyme-adapter-react-16": "^1.12.1",
-        "react-scripts": "^3.0.0",
+        "enzyme": "^3.10.0",
+        "enzyme-adapter-react-16": "^1.14.0",
+        "react-scripts": "^3.0.1",
         "source-map-explorer": "^1.8.0"
     },
     "bugs": {
