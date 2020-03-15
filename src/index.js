@@ -8,21 +8,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/css/bootstrap-theme.min.css';
 import './scss/style.scss';
 
-function render(Component) {
-    ReactDOM.render(
-        <Component />,
-        document.getElementById('root')
-    );
-}
-
-render(App);
-
-if(module.hot) {
-    module.hot.accept('./App', () => {
-        const NextApp = require('./App').default;
-        render(NextApp);
-    })
-}
+ReactDOM.render(
+    <App />,
+    document.getElementById('root')
+);
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
