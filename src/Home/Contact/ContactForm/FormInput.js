@@ -9,41 +9,39 @@ const FormInput = ({
     onChange,
     type,
     value,
-}) => {
-    return (
-        <div className="form-group">
-            {
-                type === 'textarea'
-                    ? (
-                        <textarea
-                            type={type}
-                            id={name}
-                            name={name}
-                            value={value}
-                            onChange={onChange}
-                            placeholder={`Your ${displayName} *`}
-                            aria-label={`Your ${displayName} *`}
-                            className={`form-control contact_request-form-control${error ? ' is-invalid' : ''}`}
-                            maxLength={maxLength}
-                        />
-                    )
-                    : (
-                        <input
-                            type={type}
-                            id={name}
-                            name={name}
-                            value={value}
-                            onChange={onChange}
-                            placeholder={`Your ${displayName} *`}
-                            aria-label={`Your ${displayName} *`}
-                            className={`form-control contact_request-form-control${error ? ' is-invalid' : ''}`}
-                            maxLength={maxLength}
-                        />
-                    )
-            }
-        </div>
-    );
-};
+}) => (
+    <div className="form-group">
+        {
+            type === 'textarea'
+                ? (
+                    <textarea
+                        type={type}
+                        id={name}
+                        name={name}
+                        value={value}
+                        onChange={onChange}
+                        placeholder={`Your ${displayName} *`}
+                        aria-label={`Your ${displayName} *`}
+                        className={`form-control contact_request-form-control${error ? ' is-invalid' : ''}`}
+                        maxLength={maxLength}
+                    />
+                )
+                : (
+                    <input
+                        type={type}
+                        id={name}
+                        name={name}
+                        value={value}
+                        onChange={onChange}
+                        placeholder={`Your ${displayName} *`}
+                        aria-label={`Your ${displayName} *`}
+                        className={`form-control contact_request-form-control${error ? ' is-invalid' : ''}`}
+                        maxLength={maxLength}
+                    />
+                )
+        }
+    </div>
+);
 
 FormInput.propTypes = {
     displayName: PropTypes.string,
