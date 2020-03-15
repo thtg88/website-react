@@ -1,23 +1,4 @@
 div.g-recaptcha-container{
-    margin:0 auto;
+    margin: 0 auto;
     display: inline-block;
-}
-
-#contact-button-list li {
-    padding: 5px;
-}
-
-#message_sent-alert-success p {
-    color: #000000;
-}
-
-span.contact_request-feedback {
-    top: 18px !important;
-    right: 10px;
-}
-
-@media (min-width:1200px) {
-    div.g-recaptcha-container{
-        margin-bottom: 20px;
-    }
 }

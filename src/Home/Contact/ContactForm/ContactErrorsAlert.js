@@ -3,15 +3,15 @@ import PropTypes from 'prop-types';
 
 const ContactErrorsAlert = ({ errors }) => {
     if(errors === null || typeof errors === 'undefined') {
-        return (null);
+        return null;
     }
 
     return (
         <div className="alert alert-danger contact_request-alert">
             {
-                Object.entries(errors).map(([key, error]) => (
-                    <p key={key}>{error}</p>
-                ))
+                Object.entries(errors).map(
+                    ([key, error]) => <p key={key}>{error}</p>
+                )
             }
         </div>
     );

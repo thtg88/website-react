@@ -46,7 +46,7 @@ class ErrorBoundary extends Component {
                     <section id="not-found" className="http-error">
                         <div className="text-vertical-center">
                             <h1>500</h1>
-                            <h3>{"We're sorry - something's gone wrong."}</h3>
+                            <h3>We're sorry - something's gone wrong.</h3>
                             <Link to="/" className="btn btn-dark btn-lg">
                                 <FontAwesomeIcon fixedWidth icon={faHome} />
                                 {" "}

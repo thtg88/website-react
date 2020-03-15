@@ -43,7 +43,9 @@ const AboutContent = ({ wheresWaldoLinkOnClick, classicCarsOnClick }) => (
                     where I covered the Italian market, providing sales and technical support.
                     The role granted me the opportunity to attend
                     {' '}
-                    <a href="#wheres-waldo" onClick={wheresWaldoLinkOnClick}>conferences</a>
+                    <a href="#wheres-waldo" onClick={wheresWaldoLinkOnClick}>
+                        conferences
+                    </a>
                     {' '}
                     and events in different countries.
                 </p>

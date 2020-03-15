@@ -1,18 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Button, Modal } from 'react-bootstrap';
+import { Button, Modal, ModalBody, ModalFooter, ModalHeader } from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapMarker } from '@fortawesome/free-solid-svg-icons';
 import wheresWaldo from './wheres-waldo-750w.jpg';
 
-const { Body, Footer, Header, Title } = Modal;
-
 const WheresWaldoModal = ({ show, onHide }) => (
-    <Modal show={show} onHide={onHide}>
-        <Header closeButton>
-            <Title>Where's Waldo?</Title>
-        </Header>
-        <Body>
+    <Modal isOpen={show} toggle={onHide}>
+        <ModalHeader toggle={onHide}>Where's Waldo?</ModalHeader>
+        <ModalBody>
             <img
                 src={wheresWaldo}
                 alt="Where's Waldo?"
@@ -25,10 +21,7 @@ const WheresWaldoModal = ({ show, onHide }) => (
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    <FontAwesomeIcon
-                        fixedWidth
-                        icon={faMapMarker}
-                    />
+                    <FontAwesomeIcon fixedWidth icon={faMapMarker} />
                 </a>
                 <a
                     href="https://www.commsplus-distribution.com.au/"
@@ -40,10 +33,10 @@ const WheresWaldoModal = ({ show, onHide }) => (
                 {' '}
                 2014 Autumn Panasonic Dealer Conference, Broadbeach, Australia.
             </p>
-        </Body>
-        <Footer>
-            <Button bsStyle="primary" onClick={onHide}>Close</Button>
-        </Footer>
+        </ModalBody>
+        <ModalFooter>
+            <Button color="primary" onClick={onHide}>Close</Button>
+        </ModalFooter>
     </Modal>
 );
 
