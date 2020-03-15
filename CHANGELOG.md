@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/) (or at least it tries to).
 
+## [1.9.1] - 2020-03-15
+### Changed
+- Upgraded to `react-router-dom` v5
+### Fixed
+- `img className` attribute
+
 ## [1.9.0] - 2020-03-15
 ### Added
 - `reactstrap` dependency
