@@ -21,13 +21,13 @@ const Form = ({
 }) => (
     <form name="form" noValidate onSubmit={onSubmit}>
         <input type="hidden" id="locale" name="locale" value="en" />
-        <div id="contact_request-alert-container" className="form-group">
+        <div id="contact_request-alert-container" className="row">
             <div className="col-lg-12">
                 <ContactErrorsAlert errors={errors} />
                 <MessageSentAlert success={success} />
             </div>
         </div>
-        <div className="form-group">
+        <div className="row">
             <div className="col-md-6">
                 <FormInput
                     type="text"
@@ -71,8 +71,8 @@ const Form = ({
                 </div>
             </div>
         </div>
-        <div className="form-group">
-            <div className="col-md-12 has-feedback">
+        <div className="row mb-3">
+            <div className="col-md-12">
                 <div className="g-recaptcha-container">
                     <ReCAPTCHA
                         ref={recaptchaRef}
@@ -82,7 +82,7 @@ const Form = ({
                 </div>
             </div>
         </div>
-        <div className="form-group">
+        <div className="row">
             <div className="col-md-12 text-center">
                 <Button
                     type="submit"
