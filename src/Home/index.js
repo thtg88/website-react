@@ -80,7 +80,7 @@ class Home extends Component {
                         <h1>Hi, I'm Marco Marassi.</h1>
                         <h3>Web Developer by day, Sleeper by night.</h3>
                         <p>What did you think I was? A superhero or something?</p>
-                        <div id="profile-icon-container">
+                        <div>
                             <img
                                 id="profile-icon"
                                 src={`${PUBLIC_URL}/icon.png`}
