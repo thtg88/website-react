@@ -4,6 +4,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/) (or at least it tries to).
 
+## [1.9.0] - 2020-03-15
+### Added
+- `reactstrap` dependency
+### Changed
+- Upgraded to Bootstrap 4
+### Fixed
+- Style after Bootstrap 4 upgrade
+### Removed
+- `react-bootstrap` dependency
+
 ## [1.8.5] - 2020-03-15
 ### Changed
 - Dependency updates
