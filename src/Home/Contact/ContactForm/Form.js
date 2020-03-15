@@ -73,7 +73,7 @@ const Form = ({
         </div>
         <div className="row mb-3">
             <div className="col-md-12">
-                <div className="g-recaptcha-container">
+                <div className="my-0 mx-auto d-inline-block">
                     <ReCAPTCHA
                         ref={recaptchaRef}
                         sitekey={REACT_APP_GOOGLE_RECAPTCHA_SITE_KEY}
@@ -88,7 +88,7 @@ const Form = ({
                     type="submit"
                     to="form"
                     onClick={onSubmit}
-                    className="btn btn-dark"
+                    className="btn btn-dark p-3 border-0"
                     value={submitButtonHtml}
                     disabled={submitButtonDisabled}
                     smooth={true}

@@ -1,7 +1,6 @@
 import React, { Component, createRef } from 'react';
 import { AllHtmlEntities } from 'html-entities';
 import Form from './Form';
-import './ContactForm.scss';
 
 const { REACT_APP_WEBSITE_API_BASE_URL } = process.env;
 // const recaptchaRef = createRef();

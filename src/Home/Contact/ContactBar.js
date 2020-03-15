@@ -42,7 +42,7 @@ const ContactBar = () => (
                             target="_blank"
                             rel="noopener noreferrer"
                             title={contact.title}
-                            className="btn btn-dark mr-3 mb-3"
+                            className="btn btn-dark mr-3 mb-3 border-0"
                             key={`contact_link_${idx}`}
                         >
                             <FontAwesomeIcon

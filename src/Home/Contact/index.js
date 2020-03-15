@@ -57,7 +57,7 @@ class Contact extends Component {
         const { isScrollToTopVisible } = this.state;
 
         return (
-            <footer id="contact" className="bg-primary">
+            <footer id="contact" className="bg-primary text-white">
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-12 text-center">
@@ -72,7 +72,7 @@ class Contact extends Component {
                     id="to-top"
                     href="#top"
                     onClick={() => animateScroll.scrollToTop()}
-                    className="btn btn-dark btn-lg"
+                    className="btn btn-dark btn-lg d-block border-0"
                     aria-label="Go to the top of the page."
                     style={{
                         opacity: isScrollToTopVisible ? 1 : 0,
