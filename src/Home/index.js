@@ -93,7 +93,7 @@ class Home extends Component {
                             to="about"
                             smooth={true}
                             duration={1000}
-                            className="btn btn-dark btn-lg"
+                            className="btn btn-dark btn-lg text-white"
                         >
                             But wait, there's more!
                         </Link>
