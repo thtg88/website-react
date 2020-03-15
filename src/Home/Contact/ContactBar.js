@@ -19,9 +19,9 @@ const contacts = [
         icon: faLinkedin,
     },
     {
-        href: 'https://bitbucket.org/thtg88/',
-        title: 'I\'m also on Bitbucket.',
-        icon: faBitbucket,
+        href: 'https://github.com/thtg88/',
+        title: 'I\'m also on GitHub.',
+        icon: faGithub,
     },
     {
         href: 'https://www.instagram.com/thtg88/',
