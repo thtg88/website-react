@@ -43,7 +43,7 @@
         "url": "https://github.com/thtg88/website-react/issues"
     },
     "scripts": {
-        "analyze": "source-map-explorer build/static/js/main.*",
+        "analyze": "source-map-explorer build/static/js/*.js",
         "start": "react-scripts start",
         "build": "react-scripts build",
         "test": "react-scripts test",
