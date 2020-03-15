@@ -10,7 +10,7 @@ const MessageSentAlert = ({ success }) => {
 
     return (
         <div className="alert alert-success contact_request-alert">
-            <p>
+            <span>
                 Message sent
                 {' '}
                 <FontAwesomeIcon
@@ -18,7 +18,7 @@ const MessageSentAlert = ({ success }) => {
                     size="lg"
                     icon={faCheck}
                 />
-            </p>
+            </span>
         </div>
     );
 };

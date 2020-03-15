@@ -1,7 +1,11 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapMarker } from '@fortawesome/free-solid-svg-icons';
-import { faBitbucket, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import {
+    faGithub,
+    faInstagram,
+    faLinkedin
+} from '@fortawesome/free-brands-svg-icons';
 
 const contacts = [
     {

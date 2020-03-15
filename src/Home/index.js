@@ -67,7 +67,8 @@ class Home extends Component {
                             left: '-12px',
                             backgroundColor: '#ffffff',
                         }}
-                    ></div>
+                    >
+                    </div>
                 </div>
                 <header
                     id="top"
