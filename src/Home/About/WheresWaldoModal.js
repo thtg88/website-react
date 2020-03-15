@@ -7,9 +7,7 @@ import wheresWaldo from './wheres-waldo-750w.jpg';
 
 const WheresWaldoModal = ({ show, onHide }) => (
     <Modal isOpen={show} toggle={onHide}>
-        <ModalHeader toggle={onHide}>
-            Where's Waldo?
-        </ModalHeader>
+        <ModalHeader toggle={onHide}>Where's Waldo?</ModalHeader>
         <ModalBody>
             <img
                 src={wheresWaldo}
@@ -23,10 +21,7 @@ const WheresWaldoModal = ({ show, onHide }) => (
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    <FontAwesomeIcon
-                        fixedWidth
-                        icon={faMapMarker}
-                    />
+                    <FontAwesomeIcon fixedWidth icon={faMapMarker} />
                 </a>
                 <a
                     href="https://www.commsplus-distribution.com.au/"

@@ -5,9 +5,7 @@ import InstagramEmbed from 'react-instagram-embed';
 
 const ClassicCarsModal = ({ show, onHide }) => (
     <Modal isOpen={show} toggle={onHide}>
-        <ModalHeader toggle={onHide}>
-            Chasing Classic Cars
-        </ModalHeader>
+        <ModalHeader toggle={onHide}>Chasing Classic Cars</ModalHeader>
         <ModalBody>
             <InstagramEmbed
                 url="https://www.instagram.com/p/4bs5E3zh-c/"
