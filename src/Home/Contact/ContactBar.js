@@ -30,27 +30,26 @@ const ContactBar = () => (
     <div className="row">
         <div className="col-lg-12 text-center">
             <hr className="small" />
-            <ul id="contact-button-list" className="list-inline">
+            <div className="d-inline-block" role="group">
                 {
                     contacts.map((contact, idx) => (
-                        <li key={`contact_link_${idx}`}>
-                            <a
-                                href={contact.href}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                title={contact.title}
-                                className="btn btn-dark"
-                            >
-                                <FontAwesomeIcon
-                                    fixedWidth
-                                    icon={contact.icon}
-                                    size="3x"
-                                />
-                            </a>
-                        </li>
+                        <a
+                            href={contact.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            title={contact.title}
+                            className="btn btn-dark mr-3 mb-3"
+                            key={`contact_link_${idx}`}
+                        >
+                            <FontAwesomeIcon
+                                fixedWidth
+                                icon={contact.icon}
+                                size="3x"
+                            />
+                        </a>
                     ))
                 }
-            </ul>
+            </div>
         </div>
     </div>
 );
