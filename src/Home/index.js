@@ -87,7 +87,7 @@ class Home extends Component {
                                 src={`${PUBLIC_URL}/icon.png`}
                                 alt="Icon Logo"
                                 title="This looks like my face."
-                                className="img-responsive img-circle d-inline-block"
+                                className="img-fluid img-circle d-inline-block"
                             />
                         </div>
                         <Link

@@ -9,30 +9,34 @@ const WheresWaldoModal = ({ show, onHide }) => (
     <Modal isOpen={show} toggle={onHide}>
         <ModalHeader toggle={onHide}>Where's Waldo?</ModalHeader>
         <ModalBody>
-            <img
-                src={wheresWaldo}
-                alt="Where's Waldo?"
-                title="CommsPlus Distribution 2014 Autumn Panasonic Dealer Conference, Broadbeach, Australia."
-                className="img-responsive"
-            />
-            <p className="help-block">
-                <a
-                    href="https://www.google.co.uk/maps/place/Sofitel+Gold+Coast+Broadbeach/@-28.0297826,153.4302588,18z"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    <FontAwesomeIcon fixedWidth icon={faMapMarker} />
-                </a>
-                <a
-                    href="https://www.commsplus-distribution.com.au/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    CommsPlus Distribution
-                </a>
-                {' '}
-                2014 Autumn Panasonic Dealer Conference, Broadbeach, Australia.
-            </p>
+            <div className="row">
+                <div className="col-md-12">
+                    <img
+                        src={wheresWaldo}
+                        alt="Where's Waldo?"
+                        title="CommsPlus Distribution 2014 Autumn Panasonic Dealer Conference, Broadbeach, Australia."
+                        className="img-fluid"
+                    />
+                    <p className="help-block">
+                        <a
+                            href="https://www.google.co.uk/maps/place/Sofitel+Gold+Coast+Broadbeach/@-28.0297826,153.4302588,18z"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <FontAwesomeIcon fixedWidth icon={faMapMarker} />
+                        </a>
+                        <a
+                            href="https://www.commsplus-distribution.com.au/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            CommsPlus Distribution
+                        </a>
+                        {' '}
+                        2014 Autumn Panasonic Dealer Conference, Broadbeach, Australia.
+                    </p>
+                </div>
+            </div>
         </ModalBody>
         <ModalFooter>
             <Button color="primary" onClick={onHide}>Close</Button>
