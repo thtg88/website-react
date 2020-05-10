@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMapMarker } from '@fortawesome/free-solid-svg-icons';
+import { faMapMarker, faEdit } from '@fortawesome/free-solid-svg-icons';
 import {
     faGithub,
     faInstagram,
@@ -27,6 +27,11 @@ const contacts = [
         href: 'https://www.instagram.com/thtg88/',
         title: 'Sometimes, I\'m on Instagram.',
         icon: faInstagram,
+    },
+    {
+        href: 'https://blog.marco-marassi.com',
+        title: 'I also write on my blog from time to time.',
+        icon: faEdit,
     },
 ];
 
