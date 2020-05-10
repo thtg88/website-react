@@ -72,11 +72,10 @@ function Home() {
           <p>What did you think I was? A superhero or something?</p>
           <div>
           <img
-            id="profile-icon"
             src="/icon.png"
             alt="Icon Logo"
             title="This looks like my face."
-            className="img-fluid img-circle d-inline-block"
+            className="img-fluid img-circle d-inline-block profile-icon"
           />
           </div>
             <Link
