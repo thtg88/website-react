@@ -1,8 +1,53 @@
-# Personal Website - React
+# Personal Website - marco-marassi.com
+You can find the app in action [here](https://www.marco-marassi.com).
 
-My Personal Website is a single-page web application mainly designed as a test workbench for my own personal development with the [React](https://reactjs.org/) front-end Framework, and with other web technologies.
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
+## Table of Contents
 
-## Security Vulnerabilities
+* [Installation](#installation)
+* [Basic Usage](#basic-usage)
+* [Versioning](#versioning)
+* [License](#license)
 
-If you discover a security vulnerability within my Personal Website, please send an e-mail to Marco Marassi at security@marco-marassi.com. All security vulnerabilities will be promptly addressed.
+## Installation
+
+``` bash
+# clone the repo
+$ git clone https://github.com/thtg88/www.marco-marassi.com.git my-project
+
+# go into app's directory
+$ cd my-project
+```
+
+## Basic usage
+
+``` bash
+# dev server with hot module replacement at http://localhost:3000
+$ npm run dev
+```
+
+Navigate to [http://localhost:3000](http://localhost:3000). The app will automatically reload if you change any of the source files.
+
+## Build
+
+Run `build` to build the project. The build artifacts will be stored in the `.next/` directory.
+
+```bash
+# build for production with minification
+$ npm run build
+```
+
+Run `export` to build the project The artifacts will be stored in the `out/` directory.
+
+```bash
+npm run export
+```
+
+## Versioning
+
+www.marco-marassi.com is maintained under [the Semantic Versioning guidelines](http://semver.org/).
+
+See the [change-log](CHANGELOG.md) of the project for changelogs for each release version.
+
+## License
+
+Code released under [the MIT license](LICENSE).
