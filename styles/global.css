@@ -209,6 +209,23 @@ section.http-error {
   color: #000000;
 }
 
+h5 {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+button:not(:disabled) {
+  cursor: pointer;
+}
+
+.close {
+  background-color: initial;
+  border: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
 p.lead a {
   color:inherit;
   text-decoration: underline;
