@@ -6,7 +6,7 @@ import MessageSentAlert from './MessageSentAlert';
 import { Button } from 'react-scroll';
 import FormInput from './FormInput';
 
-const { GOOGLE_RECAPTCHA_SITE_KEY } = process.env;
+const { NEXT_PUBLIC_GOOGLE_RECAPTCHA_SITE_KEY } = process.env;
 
 const Form = ({
   errors,
@@ -75,7 +75,7 @@ const Form = ({
         <div className="my-0 mx-auto d-inline-block">
           <ReCAPTCHA
             ref={recaptchaRef}
-            sitekey={GOOGLE_RECAPTCHA_SITE_KEY}
+            sitekey={NEXT_PUBLIC_GOOGLE_RECAPTCHA_SITE_KEY}
             onChange={reCaptchaOnChange}
           />
         </div>
