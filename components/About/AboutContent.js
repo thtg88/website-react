@@ -7,7 +7,18 @@ const AboutContent = ({ wheresWaldoLinkOnClick, classicCarsOnClick }) => (
       <div className="col-lg-12 text-center">
         <h2>About Me</h2>
         <p className="lead">
-          I am currently a Principal Web Developer at
+          I am currently a Back-end Web Developer at
+          {' '}
+          <a
+            href="https://simpleweb.co.uk/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Simpleweb
+          </a>.
+        </p>
+        <p className="lead">
+          Previously, I have been working at
           {' '}
           <a
             href="https://somersetdesign.co.uk/"
@@ -15,10 +26,62 @@ const AboutContent = ({ wheresWaldoLinkOnClick, classicCarsOnClick }) => (
             rel="noopener noreferrer"
           >
             Somerset Design
+          </a> as Principal Web Developer,
+          {' '}
+          where I learnt how to work in the web agency's fast-paced environment,
+          {' '}
+          and the best practices of building websites using the company's own CMS.
+        </p>
+        <p className="lead">
+          While there, I have also learnt the best practices around SEO,
+          {' '}
+          basic UX principles,
+          {' '}
+          and how to use the latest web development tools:
+          {' '}
+          from local development environment
+          {' '}
+          <a
+            href="https://www.vagrantup.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Vagrant
+          </a>,
+          {' '}
+          to front-end frameworks like Angular and
+          {' '}
+          <a
+            href="https://reactjs.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            React
+          </a>,
+          {' '}
+          to REST APIs developed in
+          {' '}
+          <a
+            href="https://laravel.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Laravel
           </a>.
         </p>
         <p className="lead">
-          Previously, I worked as a Technical Specialist for
+          Being a Principal Web Developer also meant having the opportunity
+          {' '}
+          to mentor the rest of the team,
+          {' '}
+          sharing my knowledge,
+          {' '}
+          and helping others understand and solve problems
+          {' '}
+          using the technologies listed above.
+        </p>
+        <p className="lead">
+           Before Somerset Design, I worked as a Technical Specialist for
           {' '}
           <a
             href="https://mondago.com/"
@@ -50,7 +113,11 @@ const AboutContent = ({ wheresWaldoLinkOnClick, classicCarsOnClick }) => (
           and events in different countries.
         </p>
         <p className="lead">
-          Outside of the office, you are most likely to find me at a cafè trying to speak a new foreign language,
+          Outside of the office,
+          {' '}
+          you are most likely to find me at a caf&egrave;
+          {' '}
+          trying to speak a new foreign language,
           {' '}
           or chasing
           {' '}
