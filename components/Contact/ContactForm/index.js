@@ -2,7 +2,7 @@ import React, { Component, createRef } from 'react';
 import { AllHtmlEntities } from 'html-entities';
 import Form from './Form';
 
-const { WEBSITE_API_BASE_URL } = process.env;
+const { NEXT_PUBLIC_WEBSITE_API_BASE_URL } = process.env;
 
 class ContactForm extends Component {
   state = {
@@ -54,7 +54,7 @@ class ContactForm extends Component {
       submitButtonHtml: 'Sending...',
     });
 
-    fetch(WEBSITE_API_BASE_URL+'/api/v1/contact-requests', {
+    fetch(NEXT_PUBLIC_WEBSITE_API_BASE_URL+'/api/v1/contact-requests', {
       method: 'POST',
       mode: 'cors',
       credentials: 'same-origin',
