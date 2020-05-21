@@ -10,10 +10,10 @@
     "url": "git@github.com:thtg88/www.marco-marassi.com.git"
   },
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 8888",
     "build": "next build",
     "export": "next build && next export",
-    "start": "next start"
+    "start": "next start -p 8888"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.13.0",
