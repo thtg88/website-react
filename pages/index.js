@@ -4,7 +4,7 @@ import About from '../components/About';
 import Contact from '../components/Contact';
 
 const siteTitle = 'Marco Marassi - Web Developer';
-const siteDescription = 'Web Developer based in Bristol, UK, with experience in Laravel, PHP, ReactJS, Angular, JavaScript, jQuery, AJAX, and SQL (MySQL and SQL Server).';
+const siteDescription = 'Web Developer based in Bristol, UK, with experience in Laravel, PHP, ReactJS, JavaScript, AJAX, and SQL (MySQL and Postgres).';
 const themeColour = '#007bff';
 
 function Home() {
