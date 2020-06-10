@@ -33,32 +33,37 @@ function Home() {
         <meta name="msapplication-TileColor" content={themeColour} />
         <meta name="theme-color" content={themeColour} />
         <title>{siteTitle}</title>
-        <script type="application/ld+json">{`{
-"@context": "http://schema.org",
-"@type": "Person",
-"name": "Marco Marassi",
-"familyName": "Marassi",
-"givenName": "Marco",
-"gender": "Male",
-"nationality": "Italy",
-"jobTitle": "Back-end Web Developer",
-"knowsLanguage": [
-  "it-IT",
-  "en-GB",
-  "es-ES",
-  "fr-FR"
-],
-"worksFor": {
-  "name": "Simpleweb",
-  "url": "https://simpleweb.co.uk"
-},
-"image": "/icon.png",
-"sameAs": [
-  "https://www.linkedin.com/in/marco-marassi",
-  "https://www.instagram.com/thtg88",
-  "https://github.com/thtg88"
-]
-}`}</script>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "http://schema.org",
+              "@type": "Person",
+              "name": "Marco Marassi",
+              "familyName": "Marassi",
+              "givenName": "Marco",
+              "gender": "Male",
+              "nationality": "Italy",
+              "jobTitle": "Back-end Web Developer",
+              "knowsLanguage": [
+                "it-IT",
+                "en-GB",
+                "es-ES",
+                "fr-FR"
+              ],
+              "worksFor": {
+                "name": "Simpleweb",
+                "url": "https://simpleweb.co.uk"
+              },
+              "image": "/icon.png",
+              "sameAs": [
+                "https://www.linkedin.com/in/marco-marassi",
+                "https://www.instagram.com/thtg88",
+                "https://github.com/thtg88"
+              ]
+            })
+          }}
+        />
       </Head>
       <div className="root-container">
         <header
