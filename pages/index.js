@@ -35,11 +35,6 @@ function Home() {
             as="style"
             href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic"
         />
-        <link
-            rel="preload"
-            as="script"
-            href="https://www.google.com/recaptcha/api.js?onload=onloadcallback&render=explicit"
-        />
         <link rel="preload" as="image" href="/icon.png" />
         <link
             rel="preload"
