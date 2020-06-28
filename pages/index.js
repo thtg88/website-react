@@ -30,6 +30,51 @@ function Home() {
         <meta property="og:url" content="/" />
         <link rel="manifest" href="/manifest.json" />
         <link rel="shortcut icon" href="/favicons/favicon.ico" />
+        <link
+            rel="preload"
+            as="style"
+            href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic"
+        />
+        <link
+            rel="preload"
+            as="script"
+            href="https://www.google.com/recaptcha/api.js?onload=onloadcallback&render=explicit"
+        />
+        <link rel="preload" as="image" href="/icon.png" />
+        <link
+            rel="preload"
+            as="image"
+            href="/images/bg-2-full.jpg"
+            sizes="100vw"
+            media="(orientation:landscape) and (min-width:1201px)"
+        />
+        <link
+            rel="preload"
+            as="image"
+            href="/images/bg-2-1200w.jpg"
+            sizes="100vw"
+            media="(orientation:landscape) and (max-width:1200px) and (min-width:801px)"
+        />
+        <link
+            rel="preload"
+            as="image"
+            href="/images/bg-2-900w.jpg"
+            sizes="100vw"
+            media="(orientation:landscape) and (max-width:800px) and (min-width:501px)"
+        />
+        <link
+            rel="preload"
+            as="image"
+            href="/images/bg-2-600w.jpg"
+            sizes="100vw"
+            media="(orientation:landscape) and (max-width:500px)"
+        />
+        <link
+            rel="preload"
+            as="image"
+            href="/images/bg-portrait-2.jpg"
+            media="(orientation:portrait) and (max-width:500px)"
+        />
         <meta name="msapplication-TileColor" content={themeColour} />
         <meta name="theme-color" content={themeColour} />
         <title>{siteTitle}</title>
