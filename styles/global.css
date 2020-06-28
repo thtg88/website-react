@@ -76,6 +76,10 @@ hr.small {
   background-position: center center;
   background-attachment: scroll;
   height: 100%;
+  animation: opacity;
+  animation-duration: 3s;
+  animation-fill-mode: backwards;
+  transition: opacity 3s ease-in-out;
 }
 
 .profile-icon {
@@ -259,10 +263,6 @@ ul.sidebar-nav>li.dropdown>ul.dropdown-menu>li{
 
   .header {
     background-image: url(/images/bg-2-full.jpg);
-    animation: opacity;
-    animation-duration: 3s;
-    animation-fill-mode: backwards;
-    transition: opacity 3s ease-in-out;
   }
 }
 
