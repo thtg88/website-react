@@ -30,6 +30,11 @@ function Home() {
         <meta property="og:url" content="/" />
         <link rel="manifest" href="/manifest.json" />
         <link rel="shortcut icon" href="/favicons/favicon.ico" />
+        <link
+            rel="preload"
+            as="style"
+            href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic"
+        />
         <meta name="msapplication-TileColor" content={themeColour} />
         <meta name="theme-color" content={themeColour} />
         <title>{siteTitle}</title>
