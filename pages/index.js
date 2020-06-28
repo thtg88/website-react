@@ -40,6 +40,7 @@ function Home() {
             as="script"
             href="https://www.google.com/recaptcha/api.js?onload=onloadcallback&render=explicit"
         />
+        <link rel="preload" as="image" href="/icon.png" />
         <meta name="msapplication-TileColor" content={themeColour} />
         <meta name="theme-color" content={themeColour} />
         <title>{siteTitle}</title>
