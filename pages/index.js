@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import Image from 'next/image'
 import { Link } from 'react-scroll';
 import About from '../components/About';
 import Contact from '../components/Contact';
@@ -117,11 +116,9 @@ function Home() {
           <h3>Web Developer by day, Sleeper by night.</h3>
           <p>What did you think I was? A superhero or something?</p>
           <div>
-          <Image
+          <img
             src="/icon.png"
             alt="Icon Logo"
-            width={200}
-            height={150}
             title="This looks like my face."
             className="img-fluid img-circle d-inline-block profile-icon"
           />
