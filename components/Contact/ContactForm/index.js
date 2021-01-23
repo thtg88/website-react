@@ -1,5 +1,5 @@
 import React, { Component, createRef } from 'react';
-import { AllHtmlEntities } from 'html-entities';
+import { decode } from 'html-entities';
 import Form from './Form';
 
 const { NEXT_PUBLIC_WEBSITE_API_BASE_URL } = process.env;
@@ -78,7 +78,6 @@ class ContactForm extends Component {
 
   handleResponse(response) {
     const { recaptcha } = this.state;
-    const entities = new AllHtmlEntities();
 
     if(typeof response === 'object') {
       if(typeof response.success !== 'undefined') {
@@ -101,7 +100,7 @@ class ContactForm extends Component {
         Object.entries(response.errors).forEach(([field, errors]) => {
           if(Array.isArray(errors)) {
             errors.forEach((error, idx) => {
-              const msg = entities.decode(error);
+              const msg = decode(error);
 
               newContactRequestErrors[field] = msg;
             });
