@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import PropTypes from 'prop-types';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -10,11 +11,13 @@ const ClassicCarsModal = ({ show, onHide }) => (
     <ModalBody>
       <div className="row">
         <div className="col-md-12">
-          <img
+          <Image
             src="/images/classic-car-612w.jpg"
             alt="Chasing Classic Cars"
             title="Jaguar Driving Experience, 2015, Kenilworth, UK."
             className="img-fluid"
+            width={612}
+            height={612}
           />
           <p className="help-block">
             <a

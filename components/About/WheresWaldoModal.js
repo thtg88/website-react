@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Image from 'next/image';
 import { Button, Modal, ModalBody, ModalFooter, ModalHeader } from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapMarker } from '@fortawesome/free-solid-svg-icons';
@@ -10,11 +11,13 @@ const WheresWaldoModal = ({ show, onHide }) => (
     <ModalBody>
       <div className="row">
         <div className="col-md-12">
-          <img
+          <Image
             src="/images/wheres-waldo-750w.jpg"
             alt="Where's Waldo?"
             title="CommsPlus Distribution 2014 Autumn Panasonic Dealer Conference, Broadbeach, Australia."
             className="img-fluid"
+            width={750}
+            height={563}
           />
           <p className="help-block">
             <a
